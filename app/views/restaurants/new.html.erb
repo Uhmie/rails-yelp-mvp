@@ -1,2 +1,8 @@
-<h1>Restaurants#new</h1>
-<p>Find me in app/views/restaurants/new.html.erb</p>
+<%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name, placeholder: 'Name of Restaurant'%>
+    <%= f.input :address, placeholder: '32940 Musterstadt'%>
+    <%= f.input :phone_number, placeholder: '+XX XXX XXX'%>
+    <%= f.input :category, collection: %w[chinese italian japanese french belgian] %>
+    <%= f.submit%>
+<% end %>
+
